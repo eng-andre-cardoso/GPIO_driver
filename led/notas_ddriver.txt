@@ -1,0 +1,16 @@
+Notas DDriver Led
+
+1º passo: Mudar o KDIR no Makefile para o diretório correto
+2º passo: Executar o comando make
+3º passo: Copiar o ficheiro .ko para a Raspberry
+4º passo: Na Raspberry, dentro do respetivo diretório executar
+	$insmod <<nome do ficheiro>>.ko
+5º passo: Para verificar que o device driver foi devidamente inserido executar
+	$lsmod
+6º passo: Montar circuito pull-up para o Led no pino 20. Pinout disponível em https://pinout.xyz/
+7º passo: Para ligar o led executar
+	$echo 1 > led
+8º passo: para desligar o Led executar
+	$echo 0 > led
+9º passo: para remover o device driver executar
+	$rmmod led
